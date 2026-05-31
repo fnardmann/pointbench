@@ -1,3 +1,0 @@
-/home/felix/git/pointbench/CMakeFiles/sq_distance_cpu.dir
-/home/felix/git/pointbench/CMakeFiles/edit_cache.dir
-/home/felix/git/pointbench/CMakeFiles/rebuild_cache.dir
