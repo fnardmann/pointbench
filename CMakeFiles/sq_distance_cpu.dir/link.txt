@@ -1,0 +1,2 @@
+/usr/bin/ar qc libsq_distance_cpu.a CMakeFiles/sq_distance_cpu.dir/cpu/sq_distance.cpp.o
+/usr/bin/ranlib libsq_distance_cpu.a
