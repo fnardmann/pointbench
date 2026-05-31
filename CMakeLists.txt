@@ -8,8 +8,13 @@ include_directories(${CMAKE_SOURCE_DIR})
 
 add_library(sq_distance_cpu STATIC cpu/sq_distance.cpp)
 
+add_executable(pointbench main.cpp)
+target_link_libraries(pointbench sq_distance_cpu)
+
 find_package(CUDA)
 if(CUDA_FOUND)
     cuda_add_library(sq_distance_cuda STATIC cuda/sq_distance.cu)
     target_compile_options(sq_distance_cuda PRIVATE --use_fast_math)
+    target_compile_definitions(pointbench PRIVATE USE_CUDA)
+    target_link_libraries(pointbench sq_distance_cuda)
 endif()
